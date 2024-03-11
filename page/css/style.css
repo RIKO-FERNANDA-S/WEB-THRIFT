@@ -6,18 +6,14 @@ html {
   scroll-behavior: smooth;
 }
 html body {
-  background-color: #B6FFFA;
+  background-color: #F8FFD2;
   margin: 0;
   padding: 0;
 }
 
 .nav-scroll {
-  background-color: #80B3FF;
+  background-color: #F1EB90;
   transition: 0.4s;
-}
-.nav-scroll .text-nav {
-  color: blanchedalmond;
-  font-family: "Caveat", cursive;
 }
 
 nav {
@@ -27,6 +23,9 @@ nav {
   justify-content: space-between;
   padding: 0 5px 0 5px;
   z-index: 99;
+}
+nav .sidebar {
+  display: none;
 }
 nav .logo {
   width: 6rem;
@@ -44,6 +43,7 @@ nav .text-nav {
 }
 nav .text-nav a {
   text-decoration: none;
+  font-weight: bold;
   color: crimson;
   font-size: 1.8rem;
   font-family: "Poppins", sans-serif;
@@ -60,7 +60,7 @@ nav .menu-nav {
   font-family: "Caveat", cursive;
   font-weight: 700;
   font-style: normal;
-  color: rgb(110, 87, 59);
+  color: crimson;
   margin-left: 5rem;
   padding-top: 13rem;
   margin-right: 6rem;
@@ -88,11 +88,11 @@ nav .menu-nav {
   margin-top: 1.5rem;
   margin-left: 10px;
   cursor: pointer;
-  border-color: #235196;
+  border-color: #6a7556;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.575);
 }
 .hero .text-hero button:hover {
-  background-color: #80B3FF;
+  background-color: #b8ebb2;
   transition: 0.5s ease-out;
   transform: scale(1.1);
 }
@@ -107,7 +107,7 @@ nav .menu-nav {
   height: max-content;
   padding: 0;
   justify-content: center;
-  background-color: aqua;
+  background-color: #F8FFD2;
   padding-bottom: 3rem;
 }
 .product .judul-product {
@@ -122,7 +122,7 @@ nav .menu-nav {
   margin: 0;
   font-size: 3rem;
   font-family: "Poppins", sans-serif;
-  color: rgb(110, 87, 59);
+  color: crimson;
 }
 .product .judul-product h1 span {
   border-bottom: 3px solid rgb(79, 214, 17);
@@ -177,77 +177,83 @@ nav .menu-nav {
   transition: 0.5s;
 }
 
-footer {
+.footer {
   font-family: "Poppins", sans-serif;
   height: -moz-max-content;
   height: max-content;
   padding: 3rem 0 2rem 0;
-  background-color: rgb(14, 114, 117);
+  background-color: #DF826C;
 }
-footer .container {
+.footer .container {
   display: flex;
   width: 100%;
   height: 21rem;
 }
-footer .container .contentFooter1 {
+.footer .container .contentFooter1 {
   width: 50%;
   height: 100%;
+  color: #860A35;
 }
-footer .container .contentFooter1 h1 {
+.footer .container .contentFooter1 h1 {
   margin: 0;
+  font-size: 2rem;
   padding-left: 2rem;
 }
-footer .container .contentFooter1 p {
+.footer .container .contentFooter1 p {
   padding: 0 2rem 0 2rem;
   font-size: 1.8rem;
   font-family: "Caveat", cursive;
 }
-footer .container .contentFooter1 .copyright {
+.footer .container .contentFooter1 .copyright {
   font-weight: bold;
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
   display: flex;
 }
-footer .container .garis-footer {
+.footer .container .garis-footer {
   width: 3px;
   height: 80%;
   margin: 3rem 0 1rem 0;
   background-color: #3c4047;
 }
-footer .container .contentFooter2 {
+.footer .container .contentFooter2 {
   width: 50%;
+  color: #860A35;
 }
-footer .container .contentFooter2 h1 {
+.footer .container .contentFooter2 h1 {
   margin: 0;
+  font-size: 2rem;
   padding-left: 2rem;
 }
-footer .container .contentFooter2 .container-icons {
+.footer .container .contentFooter2 .container-icons {
   width: 100%;
+  flex-wrap: wrap;
   display: flex;
 }
-footer .container .contentFooter2 .container-icons .icons {
+.footer .container .contentFooter2 .container-icons .icons {
   margin-top: 2rem;
   padding: 0 1rem 0 1rem;
   width: -moz-max-content;
   width: max-content;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1rem;
 }
-footer .container .contentFooter2 .container-icons .icons span {
+.footer .container .contentFooter2 .container-icons .icons span {
   width: 15rem;
   display: flex;
   text-align: start;
 }
-footer .container .contentFooter2 .container-icons .icons span a {
+.footer .container .contentFooter2 .container-icons .icons span a {
   font-size: 4rem;
   color: black;
   margin: 1rem;
 }
-footer .container .contentFooter2 .container-icons .icons span a i {
+.footer .container .contentFooter2 .container-icons .icons span a i {
+  color: #860A35;
   margin: 0;
 }
-footer .container .contentFooter2 .container-icons .icons span p {
+.footer .container .contentFooter2 .container-icons .icons span p {
   font-size: 1.2rem;
   margin: 0;
   display: flex;
@@ -257,6 +263,50 @@ footer .container .contentFooter2 .container-icons .icons span p {
 @media (max-width: 768px) {
   nav {
     width: 100%;
+  }
+  nav .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(38, 100, 74, 0.2274509804);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.185);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    animation: alternate;
+  }
+  nav .sidebar .top {
+    display: flex;
+    color: #6a7556;
+  }
+  nav .sidebar .top i {
+    font-size: 2.4rem;
+    align-items: center;
+    display: flex;
+    padding: 1rem;
+    cursor: pointer;
+  }
+  nav .sidebar .top h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+  }
+  nav .sidebar a {
+    text-decoration: none;
+    color: crimson;
+    font-size: 2.5rem;
+    padding-left: 1.5rem;
+    margin-bottom: 1.7rem;
+    align-items: center;
+    font-family: "Caveat", cursive;
+    font-weight: 600;
+  }
+  nav .sidebar a:hover {
+    text-shadow: 3px 3px 9px rgb(207, 184, 184);
   }
   nav .logo {
     width: 4rem;
@@ -315,72 +365,83 @@ footer .container .contentFooter2 .container-icons .icons span p {
   .hero .img-home {
     display: none;
   }
-  footer {
-    background-color: #235196;
+  .footer {
+    background-color: #DF826C;
     justify-content: center;
     text-align: center;
+    height: 130vh;
     display: flex;
     flex-direction: row;
   }
-  footer .container {
+  .footer .container {
     display: block;
   }
-  footer .container .contentFooter1 {
+  .footer .container .contentFooter1 {
     width: 100%;
     text-align: center;
     height: -moz-max-content;
     height: max-content;
     padding-bottom: 2rem;
   }
-  footer .container .contentFooter1 p {
+  .footer .container .contentFooter1 h1 {
+    padding-left: 0;
+  }
+  .footer .container .contentFooter1 p {
+    font-size: 1.4rem;
     padding: 0 2rem 0 2rem;
   }
-  footer .container .contentFooter1 .copyright {
+  .footer .container .contentFooter1 .copyright {
     font-weight: bold;
     text-align: center;
     justify-content: center;
+    font-size: 0.9rem;
     width: auto;
   }
-  footer .container .garis-footer {
+  .footer .container .garis-footer {
     width: 80%;
     height: 2px;
     justify-content: center;
     display: flex;
     margin: auto;
   }
-  footer .container .contentFooter2 {
+  .footer .container .contentFooter2 {
     width: auto;
     padding-top: 2rem;
   }
-  footer .container .contentFooter2 .container-icons {
+  .footer .container .contentFooter2 h1 {
+    padding-left: 0;
+  }
+  .footer .container .contentFooter2 .container-icons {
     text-align: center;
     width: auto;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 0.6rem;
+    display: flex;
   }
-  footer .container .contentFooter2 .container-icons .icons {
+  .footer .container .contentFooter2 .container-icons .icons {
     height: -moz-max-content;
     height: max-content;
-    justify-content: center;
+    justify-content: start;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 5rem 0 5rem;
-  }
-  footer .container .contentFooter2 .container-icons .icons span {
     width: -moz-max-content;
     width: max-content;
   }
-  footer .container .contentFooter2 .container-icons .icons span a {
-    font-size: 4rem;
+  .footer .container .contentFooter2 .container-icons .icons span {
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .footer .container .contentFooter2 .container-icons .icons span a {
+    margin: 0 1rem 0 1rem;
+    font-size: 2rem;
     color: black;
   }
-  footer .container .contentFooter2 .container-icons .icons span a i {
+  .footer .container .contentFooter2 .container-icons .icons span a i {
     margin: 0;
   }
-  footer .container .contentFooter2 .container-icons .icons span p {
-    display: none;
+  .footer .container .contentFooter2 .container-icons .icons span p {
+    font-size: 0.5rem;
     margin: 0;
   }
 }/*# sourceMappingURL=style.css.map */

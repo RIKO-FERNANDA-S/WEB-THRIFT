@@ -14,16 +14,26 @@
 </head>
 <body >
     <nav id="navbar">
+        <div class="sidebar">
+            <div class="top">
+                <i onclick="hideSide()" class='bx bx-x'></i>
+                <h1>MENU</h1>
+            </div>
+            <a href="#">Home</a>
+            <a href="#product">Product</a>
+            <a href="#contact">Contact</a>
+        </div>
+
         <div class="text-nav">
             <a href="#">Home</a>
             <a href="#product">Product</a>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
         </div>
         
         <img class="logo" src="img/logo.png" alt="logo" >
         
         <div class="menu-nav">
-            <i class='bx bx-menu' ></i>
+            <i onclick="showSide()" class='bx bx-menu' id="menu"></i>
         </div>
     </nav>
 
@@ -74,7 +84,7 @@
                     <p>ready</p>
                 </div>
                 <div class="img-product">
-                    <img src="img/baju1-rm.png" alt="hoodie1">
+                    <img src="img/baju4-rm.png" alt="hoodie1">
                 </div>
             </div>
             <div class="product1">
@@ -82,7 +92,7 @@
                     <p>ready</p>
                 </div>
                 <div class="img-product">
-                    <img src="img/baju1-rm.png" alt="hoodie1">
+                    <img src="img/baju5-rm.png" alt="hoodie1">
                 </div>
             </div>
             <div class="product1">
@@ -90,13 +100,13 @@
                     <p>ready</p>
                 </div>
                 <div class="img-product">
-                    <img src="img/baju1-rm.png" alt="hoodie1">
+                    <img src="img/baju6-rm.png" alt="hoodie1">
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <section class="footer" id="contact">
         <div class="container">
             <div class="contentFooter1">
                 <h1>ARR Second 8 Thrift</h1>
@@ -111,26 +121,34 @@
                 <div class="container-icons">
                     <div class="icons">
                         <span class="whatshapp">
-                            <a href=""><i class='bx bxl-whatsapp'></i></a>
-                            <p>Contact me in whatsapp</p>
-                        </span>
-                        <span class="tiktok">
-                            <a href=""><i class='bx bxl-tiktok' ></i></a>
-                            <p>@arrsecond.8thrift</p>
-                        </span>
-                        <span class="store">
-                            <a href=""><i class='bx bxs-store' ></i></a>
-                            <p>Take a look at my shop</p>
-                        </span>
-                        <span>
-                            <a href=""><i class='bx bxl-instagram' ></i></a>
-                            <p>@arr_second.8</p>
+                            <a href="https://wa.me/6285815774807"><i class='bx bxl-whatsapp'></i></a>
+                            <p>Contact me </p>
                         </span>
                     </div>
+                        <div class="icons">
+                            <span class="tiktok">
+                                <a href="https://www.tiktok.com/@dhe.223?_t=8kZnz9e85fW&_r=1"><i class='bx bxl-tiktok' ></i></a>
+                                <p>@arrsecond.8thrift</p>
+                            </span>
+                        </div>
+                        <div class="icons">
+                            <span class="store">
+                                <a href="https://shp.ee/0qhe4vh "><i class='bx bxs-store' ></i></a>
+                                <p>Look at shop</p>
+                            </span>
+                        </div>
+                        <div class="icons">
+                            <span>
+                                <a href="https://www.instagram.com/arr_second.8?igsh=MTdvaXI5cTJheWVhZA=="><i class='bx bxl-instagram' ></i></a>
+                                <p>@arr_second.8</p>
+                            </span>
+                        </div>
+
+                    
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
 
 
 

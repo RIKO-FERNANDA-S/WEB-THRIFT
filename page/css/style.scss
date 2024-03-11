@@ -3,9 +3,12 @@
 // VARIABLE
 $text-poppins: "Poppins", sans-serif;
 $text-caveat:   "Caveat", cursive;
-$bg-color: #B6FFFA;
-$navbar: #80B3FF;
-$text-color1: rgb(110, 87, 59);
+$bg-primary: #F8FFD2;
+$bg-secondary: #DF826C;
+$navbar: #F1EB90;
+$text-color1: crimson;
+$text-color2: #860A35;
+
 
 
 html{
@@ -13,7 +16,7 @@ html{
     padding: 0;
     scroll-behavior: smooth;
     body{
-        background-color: $bg-color;
+        background-color: $bg-primary;
         margin: 0;
         padding: 0;
     }
@@ -22,10 +25,7 @@ html{
 .nav-scroll{
     background-color: $navbar;
     transition: 0.4s;
-    .text-nav{
-        color: blanchedalmond;
-        font-family: $text-caveat ;
-    }
+
 }
 
 nav{
@@ -35,6 +35,11 @@ nav{
     justify-content: space-between;
     padding: 0 5px 0 5px;
     z-index: 99;
+
+    .sidebar{
+        display: none;
+    }
+
     .logo{
         width: 6rem;
         padding: 1rem;
@@ -49,7 +54,8 @@ nav{
         margin-left: 4rem;
         a{
             text-decoration: none;
-            color: crimson;
+            font-weight: bold;
+            color: $text-color1 ;
             font-size: 1.8rem;
             font-family: $text-poppins;
         }
@@ -96,11 +102,11 @@ nav{
             margin-top: 1.5rem;
             margin-left: 10px;
             cursor: pointer;
-            border-color: #235196;
+            border-color: #6a7556;
             box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.575);
         }
         button:hover{
-            background-color: #80B3FF;
+            background-color: #b8ebb2;
             transition: 0.5s ease-out;
             transform: scale(1.1);
         }
@@ -118,7 +124,7 @@ nav{
     height: max-content;
     padding: 0;
     justify-content: center;
-    background-color: aqua;
+    background-color: $bg-primary;
     padding-bottom: 3rem;
     .judul-product{
         width: 100%;
@@ -190,11 +196,11 @@ nav{
 
 }
 
-footer{
+.footer{
     font-family: $text-poppins;
     height: max-content;
     padding: 3rem 0 2rem 0;
-    background-color: rgb(14, 114, 117); 
+    background-color: $bg-secondary; 
     .container{
         display: flex;
         width: 100%;
@@ -202,8 +208,10 @@ footer{
         .contentFooter1{
             width: 50%;
             height: 100%;
+            color: $text-color2;
             h1{
                 margin: 0;
+                font-size: 2rem;
                 padding-left: 2rem;
 
             }
@@ -229,13 +237,15 @@ footer{
 
         .contentFooter2{
             width: 50%;
+            color: $text-color2;
             h1{
                 margin: 0;
+                font-size: 2rem;
                 padding-left: 2rem;
             }
             .container-icons{
                 width: 100%;
-                
+                flex-wrap: wrap;
                 display: flex;
                 .icons{
                     margin-top: 2rem;
@@ -243,7 +253,7 @@ footer{
                     width: max-content;
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 1.5rem;
+                    gap: 1rem;
                     
                     span{
                         width: 15rem;
@@ -254,6 +264,7 @@ footer{
                             color: black;
                             margin: 1rem;
                             i{
+                                color: $text-color2;
                                 margin: 0;
                             }
                         }
@@ -280,6 +291,49 @@ footer{
 @media (max-width: 768px) {
     nav{
         width: 100%;
+        .sidebar{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 250px;
+            z-index: 999;
+            background-color: #26644a3a;
+            backdrop-filter: blur(10px);
+            box-shadow: -10px 0 10px rgba(0, 0, 0, 0.185);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            animation: alternate;
+            .top{
+                display: flex;
+                color: #6a7556;
+                i{
+                    font-size: 2.4rem;
+                    align-items: center;
+                    display: flex;
+                    padding: 1rem;
+                    cursor: pointer;
+                }
+                h1{
+                    text-align: center;
+                    font-size: 2rem;
+                    font-family: $text-poppins;  
+                }
+            }
+            a{
+                text-decoration: none;
+                color: $text-color1;
+                font-size: 2.5rem;
+                padding-left: 1.5rem ;
+                margin-bottom: 1.7rem;
+                align-items: center;
+                font-family: $text-caveat;
+                font-weight: 600;
+            }
+            a:hover{
+                text-shadow: 3px 3px 9px rgb(207, 184, 184);
+            }
+        }
         .logo{
             width: 4rem;
             margin-left: 1rem;
@@ -340,10 +394,11 @@ footer{
         }
     }
 
-    footer{
-        background-color: #235196;
+    .footer{
+        background-color: $bg-secondary;
         justify-content: center;
         text-align: center;
+        height: 130vh;
         display: flex;
         flex-direction: row;
         
@@ -354,13 +409,18 @@ footer{
                 text-align: center;
                 height: max-content;
                 padding-bottom: 2rem;
+                h1{
+                    padding-left: 0;
+                }
                 p{
+                    font-size: 1.4rem;
                     padding: 0 2rem 0 2rem;
                 }
                 .copyright{
                     font-weight: bold;
                     text-align: center;
                     justify-content: center;
+                    font-size: 0.9rem;
                     width: auto ;
                 }
             }
@@ -376,30 +436,34 @@ footer{
             .contentFooter2{
                 width: auto; 
                 padding-top:2rem;
+                h1{
+                    padding-left: 0;
+                }
                 .container-icons{
                     text-align: center;
                     width: auto;
                     flex-wrap: wrap;
                     justify-content: center;
-                    gap: 1rem;
-                    margin-top: 2rem;
+                    margin-top: 0.6rem;
+                    display: flex;
                     .icons{
                         height: max-content; 
-                        justify-content: center;
+                        justify-content: start;
                         display: flex;
                         flex-wrap: wrap;
-                        margin: 0 5rem 0 5rem ; 
+                        width: max-content;
                         span{
                             width: max-content;
                             a{
-                                font-size:4rem;
+                                margin: 0 1rem 0 1rem;
+                                font-size: 2rem;
                                 color: black;
                                 i{
                                     margin: 0;
                                 }
                             }
                             p{
-                                display: none;
+                                font-size: 0.5rem;
                                 margin: 0;
                             }
 
